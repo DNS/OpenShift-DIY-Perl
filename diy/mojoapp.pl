@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+# shebang not needed !
 
 use Mojolicious::Lite;
 

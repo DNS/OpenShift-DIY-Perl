@@ -41,12 +41,12 @@ To start you own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port 
 
 Please edit:
 
-	.openshift/start
+	.openshift/action_hooks/start
 to autostart your webserver.
 
 and also:
 
-	.openshift/stop
+	.openshift/action_hooks/stop
 to stop your webserver.
 
 

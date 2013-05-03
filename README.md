@@ -58,6 +58,10 @@ and also:
 
 	.openshift/action_hooks/stop
 
+	#!/bin/bash
+	kill `ps -ef | grep mojoapp.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+	exit 0
+
 to stop your webserver.
 
 

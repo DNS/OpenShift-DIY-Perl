@@ -14,6 +14,7 @@ Create new app using diy-0.1 cartridge:
 
 
 Download & Build new version of Perl from source:
+
 	cd ~/app-root/data/
 	mkdir download
 	cd download
@@ -27,6 +28,7 @@ Download & Build new version of Perl from source:
 	./perl -v
 
 Then install additional Perl modules:
+
 	cd ~/app-root/data/perl-new/bin
 	HOME=~/app-root/data/ ./perl cpan
 	> cpan[1]	notest install Mojolicious DBD::Pg DBD::SQLite Plack Starman other_modules

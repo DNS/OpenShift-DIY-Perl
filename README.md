@@ -38,7 +38,7 @@ Then install additional Perl modules:
 Roll your own webserver
 ----------------------
 
-To start you own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port $OPENSHIFT_INTERNAL_PORT (usually port 8080)  :
+To start your own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port $OPENSHIFT_INTERNAL_PORT (usually port 8080)  :
 
 	cd ~/app-root/data/perl-new/bin
 	./perl plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/approot/runtime/repo/diy/myapp.pl 

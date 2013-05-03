@@ -1,7 +1,7 @@
 DIY-Perl-OpenShift-Cartridge
 ====================
 
-Steps to support Perl 5.16 or newer version on OpenShift
+Steps to support Perl 5.16 or newer version on OpenShift.com
 
 
 Steps:

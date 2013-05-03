@@ -84,6 +84,7 @@ Maintenance
 To restart your app:
 
 	rhc ssh -a diyapp 
-	> ctl_app restart
-	> ctl_all restart
+           
+	ctl_app restart
+	ctl_all restart
 

@@ -4,7 +4,6 @@ DIY-Perl-OpenShift-Cartridge
 Steps to support Perl 5.16 or newer version on OpenShift
 
 
-
 Create new DIY app from rhc
 ----------------
 Create new app using diy-0.1 cartridge, then:
@@ -39,15 +38,24 @@ To start you own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port 
 
 
 Edit:
-	~/.openshift/start
+	.openshift/start
 to autostart your webserver.
 
 and also:
-	~/.openshift/stop
+	.openshift/stop
 to stop your webserver.
 
 
 
 
+Test on your browser:
+	http://[diyapp]-[yournamespace].rhcloud.com
 
+Maintenance
+------------
+
+To restart your app:
+	rhc ssh -a diyapp 
+	ctl_app restart
+	ctl_all restart
 

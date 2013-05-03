@@ -37,8 +37,13 @@ To start you own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port 
 	./perl plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/approot/runtime/repo/diy/myapp.pl 
 
 
-You can edit .openshift/start to autostart your webserver.
-And .openshift/stop to stop your webserver.
+Edit:
+	~/.openshift/start
+to autostart your webserver.
+
+and also:
+	~/.openshift/stop
+to stop your webserver.
 
 
 

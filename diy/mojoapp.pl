@@ -7,7 +7,7 @@ plugin 'PODRenderer';
 
 get '/' => sub {
 	my $self = shift;
-	$self->render(text => "Mojolicious - OK");
+	$self->render(text => "Mojolicious - OK <br> \nPerl Version - $]");
 };
 
 

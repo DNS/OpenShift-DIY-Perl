@@ -1,4 +1,10 @@
 #!/bin/bash
 # The logic to stop your application should be put in this script.
-kill `ps -ef | grep mojoapp.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+
+# PLACKUP
+kill `ps -ef | grep plackup | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+
+# STARMAN
+#kill `ps -ef | grep starman | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+
 exit 0

@@ -63,7 +63,7 @@ and also:
 to
 
 	#!/bin/bash
-	kill `ps -ef | grep mojoapp.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+	kill `ps -ef | grep plackup | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 	exit 0
 
 to stop your webserver.
@@ -81,10 +81,23 @@ Test on your browser:
 Maintenance
 ------------
 
-To restart your app:
+To stop/start/restart your app:
 
 	rhc ssh -a diyapp 
-           
+	
+	ctl_app stop
+	ctl_app start
 	ctl_app restart
+	
+	ctl_all stop
+	ctl_all start
 	ctl_all restart
+
+
+Remember to always stop your webserver before running git push.
+	
+	rhc ssh -a diyapp
+	ctl_app stop
+	exit
+	git push
 

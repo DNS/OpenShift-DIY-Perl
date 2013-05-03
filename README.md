@@ -4,8 +4,8 @@ DIY-Perl-OpenShift-Cartridge
 Steps to support Perl 5.16 or newer version on OpenShift
 
 
-Create new DIY app from rhc
-----------------
+Steps:
+------
 
 Create new app using diy-0.1 cartridge:
 
@@ -13,7 +13,7 @@ Create new app using diy-0.1 cartridge:
 	rhc ssh -a diyapp
 
 
-Then Download & Build new version of Perl from source:
+Download & Build new version of Perl from source:
 
 	cd ~/app-root/data/download
 	wget -c -nd http://www.cpan.org/src/5.0/perl-5.16.3.tar.gz
@@ -53,8 +53,11 @@ to stop your webserver.
 
 
 Test on your browser:
+----------------------
 
 	http://[diyapp]-[yournamespace].rhcloud.com
+
+
 
 Maintenance
 ------------

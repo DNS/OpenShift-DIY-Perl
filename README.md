@@ -44,7 +44,7 @@ To start you own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port 
 	./perl plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/approot/runtime/repo/diy/myapp.pl 
 
 
-Please edit
+However, Please edit this file:
 
 	.openshift/action_hooks/start
 

@@ -3,4 +3,4 @@
 # script. The application will work only if it binds to
 # $OPENSHIFT_INTERNAL_IP:8080
 #nohup $OPENSHIFT_REPO_DIR/diy/testrubyserver.rb $OPENSHIFT_INTERNAL_IP $OPENSHIFT_REPO_DIR/diy > $OPENSHIFT_HOMEDIR/diy-0.1/logs/server.log 2>&1 &
-nohup ~/app-root/data/perl-new/bin/perl plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl 
+nohup ~/app-root/data/perl-new/bin/perl plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null &

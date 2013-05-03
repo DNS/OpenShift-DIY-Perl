@@ -5,7 +5,7 @@ Steps to support Perl 5.16 or newer version on OpenShift.com
 
 
 Steps:
-------
+--------
 
 Create new app using diy-0.1 cartridge:
 

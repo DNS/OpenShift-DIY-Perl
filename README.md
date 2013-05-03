@@ -31,7 +31,7 @@ Then install additional Perl modules:
 
 	cd ~/app-root/data/perl-new/bin
 	HOME=~/app-root/data/ ./perl cpan
-	> cpan[1]	notest install Mojolicious DBD::Pg DBD::SQLite Plack Starman other_modules
+	> cpan[1]    notest install Mojolicious DBD::Pg DBD::SQLite Plack Starman other_modules
 	> quit
 
 

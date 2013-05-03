@@ -14,8 +14,9 @@ Create new app using diy-0.1 cartridge:
 
 
 Download & Build new version of Perl from source:
-
-	cd ~/app-root/data/download
+	cd ~/app-root/data/
+	mkdir download
+	cd download
 	wget -c -nd http://www.cpan.org/src/5.0/perl-5.16.3.tar.gz
 	tar -xf perl-5.16.3.tar.gz
 	cd perl-5.16.3

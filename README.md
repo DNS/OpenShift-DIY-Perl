@@ -51,7 +51,7 @@ However, Please edit this file:
 to 
 
 	#!/bin/bash
-	nohup ~/app-root/data/perl-new/bin/perl ~/app-root/data/perl-new/bin/plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
+	nohup ~/app-root/data/perl-5.16.3/bin/perl ~/app-root/data/perl-5.16.3/bin/plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
 
 to autostart your webserver.
 

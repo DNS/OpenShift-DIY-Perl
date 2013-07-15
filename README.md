@@ -31,17 +31,17 @@ Then install additional Perl modules:
 
 	cd ~/app-root/data/perl-new/bin
 	HOME=~/app-root/data/ ./perl cpan
-	> cpan[1]    notest install Mojolicious DBD::Pg DBD::SQLite Plack Starman other_modules
+	> cpan[1]    notest install Dancer Mojolicious DBD::Pg DBD::SQLite DBD::mysql and_other_modules
 	> quit
 
 
 Roll your own webserver
 ----------------------
 
-To start your own Starman/Plackup run on host $OPENSHIFT_INTERNAL_IP and on port $OPENSHIFT_INTERNAL_PORT (usually port 8080)  :
+To start your own web server run on host $OPENSHIFT_INTERNAL_IP and on port $OPENSHIFT_INTERNAL_PORT (usually port 8080)  :
 
 	cd ~/app-root/data/perl-new/bin
-	./perl plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/approot/runtime/repo/diy/myapp.pl 
+	./perl morbo --listen 'http://$OPENSHIFT_INTERNAL_IP:$OPENSHIFT_INTERNAL_PORT' ~/app-root/runtime/repo/diy/mojoapp.pl
 
 
 However, Please edit this file:
@@ -51,7 +51,7 @@ However, Please edit this file:
 to 
 
 	#!/bin/bash
-	nohup ~/app-root/data/perl-5.16.3/bin/perl ~/app-root/data/perl-5.16.3/bin/plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
+	nohup ~/app-root/data/perl-5.16.3/bin/perl ~/app-root/data/perl-5.16.3/bin/morbo --listen 'http://$OPENSHIFT_INTERNAL_IP:$OPENSHIFT_INTERNAL_PORT' ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
 
 to autostart your webserver.
 
@@ -63,7 +63,7 @@ and also:
 to
 
 	#!/bin/bash
-	kill `ps -ef | grep plackup | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+	kill `ps -ef | grep morbo | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 	exit 0
 
 to stop your webserver.

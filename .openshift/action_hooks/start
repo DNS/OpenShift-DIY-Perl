@@ -2,11 +2,11 @@
 # The logic to start up your application should be put in this
 # script. The application will work only if it binds to
 
-# $OPENSHIFT_INTERNAL_IP
-# $OPENSHIFT_INTERNAL_PORT (usually port 8080)
+# $OPENSHIFT_DIY_IP
+# $OPENSHIFT_DIY_PORT (usually port 8080)
 
 # PLACKUP
-nohup ~/app-root/data/perl-5.16.3/bin/perl ~/app-root/data/perl-5.16.3/bin/plackup --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
+MOJO_HOME=$OPENSHIFT_REPO_DIR nohup ~/app-root/data/perl-5.16.3/bin/perl ~/app-root/data/perl-5.16.3/bin/plackup --host $OPENSHIFT_DIY_IP --port $OPENSHIFT_DIY_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
 
 # STARMAN (with 10 workers)
 #nohup ~/app-root/data/perl-5.16.3/bin/perl ~/app-root/data/perl-5.16.3/bin/starman --workers 10 --host $OPENSHIFT_INTERNAL_IP --port $OPENSHIFT_INTERNAL_PORT ~/app-root/runtime/repo/diy/mojoapp.pl > /dev/null  2>&1 &
